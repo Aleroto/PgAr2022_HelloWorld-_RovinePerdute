@@ -6,6 +6,7 @@ import java.io.File;
 
 import java.io.FileReader;
 import java.io.Reader;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -14,6 +15,8 @@ import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamReader;
 import javax.xml.stream.XMLStreamWriter;
+
+import it.unibs.fp.rovinePerdute.City;
 
 import java.io.FileOutputStream;
 
@@ -68,6 +71,11 @@ public class XMLReader {
 		}
 	}
 
+	public static ArrayList<City> addCities() {
+		
+		return null;
+	}
+	
 	private static void separatore() {
 		System.out.println(SEPARATORE);
 	}
