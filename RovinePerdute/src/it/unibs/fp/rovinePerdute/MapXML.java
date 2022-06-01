@@ -2,23 +2,23 @@ package it.unibs.fp.rovinePerdute;
 
 import java.util.ArrayList;
 
+
 public class MapXML {
-	private ArrayList<City> cities = new ArrayList<City>();
 	
-	public MapXML(ArrayList<City> cities) {
-		super();
-		this.cities = cities;
+	private ArrayList<City> city = new ArrayList<City>();
+	
+
+	public MapXML() {}
+	public MapXML(ArrayList<City> city) {
+		this.city = city;
 	}
-
-	public ArrayList<City> getCities() {
-        return cities;
-    }
-
-	public void addParameter(City c) {
-        cities.add(c);
-    }
-    
-    public void clearCities() {
-    	cities.clear();
-    }
+	//Getter
+	public ArrayList<City> getCity() {
+		return city;
+	}
+	//Setter
+	public void setCity(ArrayList<City> city) {
+		this.city = city;
+	}
+	
 }

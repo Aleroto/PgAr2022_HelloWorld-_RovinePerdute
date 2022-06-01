@@ -4,17 +4,18 @@ import java.util.ArrayList;
 
 public class City {
 	private Integer id;
-	private Double x, y, h;
+	private Integer x, y, h;
 	private String name;
-	private static ArrayList<Integer> link = new ArrayList<Integer>();
+	private ArrayList<Integer> link = new ArrayList<Integer>();
 
-	public City(Integer id, Double x, Double y, Double h, String name) {
+	public City(Integer id, String name, Integer x, Integer y, Integer h, ArrayList<Integer> link) {
 		super();
 		this.id = id;
 		this.x = x;
 		this.y = y;
 		this.h = h;
 		this.name = name;
+		this.link = link;
 	}
 
 //Getter
@@ -22,20 +23,24 @@ public class City {
 		return id;
 	}
 
-	public Double getX() {
+	public Integer getX() {
 		return x;
 	}
 
-	public Double getY() {
+	public Integer getY() {
 		return y;
 	}
 
-	public Double getH() {
+	public Integer getH() {
 		return h;
 	}
 
 	public String getName() {
 		return name;
+	}
+	
+	public ArrayList<Integer> getLink() {
+		return link;
 	}
 
 // Setter
@@ -43,15 +48,15 @@ public class City {
 		this.id = id;
 	}
 
-	public void setX(Double x) {
+	public void setX(Integer x) {
 		this.x = x;
 	}
 
-	public void setY(Double y) {
+	public void setY(Integer y) {
 		this.y = y;
 	}
 
-	public void setH(Double h) {
+	public void setH(Integer h) {
 		this.h = h;
 	}
 
@@ -59,12 +64,8 @@ public class City {
 		this.name = name;
 	}
 
+	public void addParameter(Integer value) {
+		this.link.add(value);
+	}
 	
-	public ArrayList<Integer> getLink() {
-        return link;
-    }
-
-    public void addParameter(Integer value) {
-        link.add(value);
-    }
 }
