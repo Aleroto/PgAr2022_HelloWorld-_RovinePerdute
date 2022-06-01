@@ -16,7 +16,8 @@ import javax.xml.parsers.*;
 
 public class XMLReader {
 	private static final String PATH_USER_DIRECTORY = System.getProperty("user.dir");
-	private static final String SEPARATORE = "--------------------------------------------------------------------------------------------------------------------";
+	private static final String SEPARATORE = "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
+	
 	private static final String PATH_XML_INPUT = PATH_USER_DIRECTORY + "/XML/INPUT/";
 
 	public static ArrayList<City> addCities() {
@@ -60,95 +61,7 @@ public class XMLReader {
 			return null;
 		}
 	}
-	/*
-	 * public static void printXML() { XMLInputFactory xmlInputFactory = null;
-	 * XMLStreamReader xmlStreamReader = null; ArrayList<City> c = new
-	 * ArrayList<City>();
-	 * 
-	 * try { // File Path Reader fileReader = new FileReader(PATH_XML_INPUT +
-	 * UI.filename); // Read XML file. xmlInputFactory =
-	 * XMLInputFactory.newInstance(); // Get XMLInputFactory instance.
-	 * xmlStreamReader = xmlInputFactory.createXMLStreamReader(fileReader); //
-	 * Create XMLStreamReader object.
-	 * 
-	 * // Iterate through events. while (xmlStreamReader.hasNext()) { int xmlEvent =
-	 * xmlStreamReader.next(); // Get integer value of current event. switch
-	 * (xmlEvent) { case XMLStreamConstants.START_DOCUMENT: // Inizio del documento:
-	 * stampa che inizia il documento System.out.println("Start Read Doc " +
-	 * UI.filename); break; case XMLStreamConstants.START_ELEMENT: // Inizio di un
-	 * elemento: stampa il nome del tag e i suoi // attributi
-	 * System.out.println("Tag " + xmlStreamReader.getLocalName()); for (int i = 0;
-	 * i < xmlStreamReader.getAttributeCount(); i++) { separatore();
-	 * System.out.printf("=> attributo %s ->%s%n",
-	 * xmlStreamReader.getAttributeLocalName(i),
-	 * xmlStreamReader.getAttributeValue(i)); } break; case
-	 * XMLStreamConstants.END_ELEMENT: // Fine di un elemento: stampa il nome del
-	 * tag chiuso // System.out.println("END-Tag " +
-	 * xmlStreamReader.getLocalName()); break; case XMLStreamConstants.COMMENT:
-	 * System.out.println("// commento " + xmlStreamReader.getText()); break; //
-	 * Commento: ne stampa il contenuto case XMLStreamConstants.CHARACTERS: //
-	 * Contentenuto interno di un elemento: stampa il testo if
-	 * (xmlStreamReader.getText().trim().length() > 0) // Controlla se il testo non
-	 * contiene solo spazi System.out.println("-> " + xmlStreamReader.getText());
-	 * break; } } } catch (Exception e) { e.printStackTrace(); } }
-	 */
-
-	/*
-	 * public static ArrayList<City> addCities() { ArrayList<City> c = new
-	 * ArrayList<City>(); System.out.println(cityReader().size()); for(int i = 0; i
-	 * < cityReader().size();i++) { ArrayList<String> t = linkReader();
-	 * System.out.println(t);
-	 * /*System.out.println(Integer.parseInt(nameReader().get(i)));
-	 * System.out.println(Integer.parseInt(xReader().get(i)));
-	 * System.out.println(Integer.parseInt(yReader().get(i)));
-	 * System.out.println(Integer.parseInt(hReader().get(i)));
-	 */
-	// City temp = new City(Integer.parseInt(idReader().get(i)),
-	// nameReader().get(i), Integer.parseInt(xReader().get(i)),
-	// Integer.parseInt(yReader().get(i)), Integer.parseInt(hReader().get(i)));
-	// temp.addLink(linkReader());
-	// c.add(temp);
-	/*
-	 * } return null; }
-	 * 
-	 * public static ArrayList<String> cityReader(){ ArrayList<String> c = new
-	 * ArrayList<String>(); c.addAll(finder("city")); return c; }
-	 * 
-	 * public static ArrayList<String> idReader(){ ArrayList<String> id = new
-	 * ArrayList<String>(); id.addAll(finder("id")); return id; }
-	 * 
-	 * public static ArrayList<String> nameReader(){ ArrayList<String> n = new
-	 * ArrayList<String>(); n.addAll(finder("name")); return n; }
-	 * 
-	 * public static ArrayList<String> xReader(){ ArrayList<String> n = new
-	 * ArrayList<String>(); n.addAll(finder("x")); return n; }
-	 * 
-	 * public static ArrayList<String> yReader(){ ArrayList<String> n = new
-	 * ArrayList<String>(); n.addAll(finder("y")); return n; }
-	 * 
-	 * public static ArrayList<String> hReader(){ ArrayList<String> n = new
-	 * ArrayList<String>(); n.addAll(finder("h")); return n; }
-	 * 
-	 * public static ArrayList<String> linkReader(){ ArrayList<String> n = new
-	 * ArrayList<String>(); n.addAll(finder("link")); return n; }
-	 * 
-	 * public static ArrayList<String> finder(String type){ XMLInputFactory
-	 * xmlInputFactory = null; XMLStreamReader xmlStreamReader = null;
-	 * ArrayList<String> value = new ArrayList<String>();
-	 * 
-	 * try { Reader fileReader = new FileReader(PATH_XML_INPUT + UI.filename);
-	 * //Read XML file. xmlInputFactory = XMLInputFactory.newInstance(); //Get
-	 * XMLInputFactory instance. xmlStreamReader =
-	 * xmlInputFactory.createXMLStreamReader(fileReader); //Create XMLStreamReader
-	 * object. boolean stato = false; while(xmlStreamReader.hasNext()){ int xmlEvent
-	 * = xmlStreamReader.next(); //Get integer value of current event. if(stato) {
-	 * value.add(xmlStreamReader.getText());
-	 * System.out.println(xmlStreamReader.getText()); stato = false; } if(xmlEvent
-	 * == XMLStreamConstants.START_ELEMENT && xmlStreamReader.getLocalName() ==
-	 * type) { stato = true; } } } catch (Exception e) { e.printStackTrace(); }
-	 * return value; }
-	 */
-
+	
 	private static void separatore() {
 		System.out.println(SEPARATORE);
 	}

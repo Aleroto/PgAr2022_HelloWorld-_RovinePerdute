@@ -26,7 +26,7 @@ public class City {
 		System.out.println("Position H: " + h);
 		System.out.println("Link: ");
 		for(int i  = 0;i< link.size();i++) {
-			System.out.println("\tlink("+i+") -> "+link);
+			System.out.println("\tlink("+i+") -> "+link.get(i));
 		}
 
 	}
