@@ -1,10 +1,13 @@
 package it.unibs.fp.dataStructure;
 
+import it.unibs.fp.rovinePerdute.*;
+
 public class Vertex {
-	private String id, name;
+	private String name;
+	private Integer id;
 	private CityPosition position;
 
-	public Vertex(String id, String name, CityPosition position) {
+	public Vertex(Integer id, String name, CityPosition position) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -12,7 +15,7 @@ public class Vertex {
 	}
 
 //Getter, use only this and no the setter because this info is always the same after the implementation
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 

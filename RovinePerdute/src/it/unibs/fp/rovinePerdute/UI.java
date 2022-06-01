@@ -12,6 +12,7 @@ public class UI {
 		
 		filename = XMLReader.chooseXML();
 		mapFromXML = new MapXML(XMLReader.addCities());
+		mapFromXML.printMapXML();
 		/*for (Map.Entry<City> entry : map.getCities().entrySet()) {
 		}*/
 		//XMLReader.printXML();

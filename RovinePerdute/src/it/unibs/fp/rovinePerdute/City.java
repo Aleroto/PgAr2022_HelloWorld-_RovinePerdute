@@ -18,6 +18,20 @@ public class City {
 		this.link = link;
 	}
 
+	public void printCity() {
+		System.out.println("ID: " + id);
+		System.out.println("name: " + name);
+		System.out.println("Position X: " + x);
+		System.out.println("Position Y: " + y);
+		System.out.println("Position H: " + h);
+		System.out.println("Link: ");
+		for(int i  = 0;i< link.size();i++) {
+			System.out.println("\tlink("+i+") -> "+link);
+		}
+
+	}
+	
+
 //Getter
 	public Integer getId() {
 		return id;
@@ -38,7 +52,7 @@ public class City {
 	public String getName() {
 		return name;
 	}
-	
+
 	public ArrayList<Integer> getLink() {
 		return link;
 	}
@@ -67,5 +81,5 @@ public class City {
 	public void addParameter(Integer value) {
 		this.link.add(value);
 	}
-	
+
 }
