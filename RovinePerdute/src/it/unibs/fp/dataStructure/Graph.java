@@ -7,6 +7,8 @@ import it.unibs.fp.rovinePerdute.*;
  * Graph Class for implements nodes and edge
  */
 public class Graph {
+	//#TODO mettere attributi per contare le città visitate e carburante totale (somma dei pesi), utilizzare un Set<integer> per raccogliere gli id delle città visitate, utilizzare una PriorityQueue<Vertex> per raccogliere i nodi
+	//SEGUI questa guida https://www.softwaretestinghelp.com/dijkstras-algorithm-in-java/
 	private static final String TEXT_DELIMITER = "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
 	int vertex; // Size of Graph
 	private Map<Vertex, LinkedList<Edge>> adj = new HashMap<>();
