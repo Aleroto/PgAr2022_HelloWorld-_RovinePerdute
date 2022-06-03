@@ -20,13 +20,27 @@ public class UI {
 		/*mapFromXML.printMapXML();*/
 		
 		System.out.println("\n\nTonatiuh MAP");
-		graphTonatiuh = new Graph();
+		graphTonatiuh = new Graph(mapFromXML.getCity().size());
 		graphTonatiuh.generateGraph(mapFromXML, 0);		
 		graphTonatiuh.displayGraph();
 		
+		System.out.println("\n\nTonatiuh VISITED MAP");
+		graphTonatiuh.algo_dijkstra(0);
+		System.out.println("\n VISITED QUEUE");
+		graphTonatiuh.displayQueue();
+		
+		
+		
 		System.out.println("\n\nMetztli MAP");
-		graphMetztli = new Graph();
+		graphMetztli = new Graph(mapFromXML.getCity().size());
 		graphMetztli.generateGraph(mapFromXML, 1);		
 		graphMetztli.displayGraph();
+		
+		System.out.println("\n\nMetztli VISITED MAP");
+		graphMetztli.algo_dijkstra(0);
+		System.out.println("\n VISITED QUEUE");
+		graphMetztli.displayQueue();
+		
+		
 	}
 }
