@@ -1,6 +1,9 @@
 package it.unibs.fp.dataStructure;
 
+
 import java.util.*;
+import java.util.Map.Entry;
+
 import it.unibs.fp.rovinePerdute.*;
 
 /**
@@ -124,4 +127,13 @@ public class Graph {
 			System.out.println(TEXT_DELIMITER);
 		}
 	}
+
+	public Queue<Edge> getQ() {
+		return q;
+	}
+
+	public void setQ(Queue<Edge> q) {
+		this.q = q;
+	}
+	
 }

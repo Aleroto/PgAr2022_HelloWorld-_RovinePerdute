@@ -1,7 +1,5 @@
 package it.unibs.fp.dataStructure;
 
-import it.unibs.fp.rovinePerdute.*;
-
 public class Vertex {
 	private String name;
 	private Integer id;

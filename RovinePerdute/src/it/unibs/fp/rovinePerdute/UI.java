@@ -1,6 +1,7 @@
 package it.unibs.fp.rovinePerdute;
 
 import it.unibs.fp.XML.XMLReader;
+import it.unibs.fp.XML.XMLWriter;
 import it.unibs.fp.dataStructure.Graph;
 
 public class UI {
@@ -40,6 +41,8 @@ public class UI {
 		graphMetztli.algo_dijkstra(0);
 		System.out.println("\n VISITED QUEUE");
 		graphMetztli.displayQueue();
+		
+		XMLWriter.writeXML(mapFromXML,"Tonathiu", graphTonatiuh.getQ().size(), graphTonatiuh.getQ(),"Metztli",graphMetztli.getQ().size(),graphMetztli.getQ());
 		
 		
 	}
